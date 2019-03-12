@@ -1,0 +1,20 @@
+module decoder(d, e, x, y, z);
+    input  e, x, y, z;
+    output [15:0]d;
+        assign d[0]= ~e & ~x & ~y & ~z;
+        assign d[1]= ~e & ~x & ~y & z;
+        assign d[2]= ~e & ~x & y & ~z;
+        assign d[3]= ~e & ~x & y & z;
+        assign d[4]= ~e & x & ~y & ~z;
+        assign d[5]= ~e & x & ~y & z;
+        assign d[6]= ~e & x & y & ~z;
+        assign d[7]= ~e & x & y & z;
+        assign d[8]= e & ~x & ~y & ~z;
+        assign d[9]= e & ~x & ~y & z;
+        assign d[10]= e & ~x & y & ~z;
+        assign d[11]= e & ~x & y & z;
+        assign d[12]= e & x & ~y & ~z;
+        assign d[13]= e & x & ~y & z;
+        assign d[14]= e & x & y & ~z;
+        assign d[15]= e & x & y & z;
+endmodule
